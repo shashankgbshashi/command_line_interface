@@ -1,0 +1,30 @@
+
+
+import argparse
+parser = argparse.ArgumentParser("Calculator programmm...")
+parser.add_argument('-a','-add',nargs='*',type=int,help="Add all the numbers entered")
+parser.add_argument('-s','-sub',nargs='*',type=int,help="Subtract all the numbers entered")
+parser.add_argument('-m','-mul',nargs='*',type=int,help="Multiply all the numbers entered")
+
+args = parser.parse_args()
+print(args)
+
+if args.a:
+    sum = 0
+    for i in range(len(args.a)):
+        sum = sum +  args.a[i]
+    print(sum)
+
+if args.m:
+    mul = 1
+    for i in range(len(args.m)):
+        mul = mul *  args.m[i]
+    print(mul)
+
+
+if args.s:
+    sub = 0
+    for i in range(len(args.s)):
+        sub = sub -  args.s[i]
+    print(sub)
+
